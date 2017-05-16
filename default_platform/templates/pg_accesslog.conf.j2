@@ -1,5 +1,0 @@
-{% if syslogs["pg"] and syslogs["pg"] != '' -%}
-access_log syslog:server={{ syslogs["pg"] }},facility=local5 main;
-{% else %}
-access_log off;
-{% endif %}

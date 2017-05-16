@@ -1,5 +1,0 @@
-{% for domain in domains -%}
-{% if domain.ssl_cert and domain.ssl_cert != '' and domain.ssl_key and domain.ssl_key != '' -%}
-{{ domain.domain }} {{ domain.ssl_cert }} {{ domain.ssl_key }}
-{% endif %}
-{% endfor %}

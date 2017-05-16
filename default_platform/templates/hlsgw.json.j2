@@ -1,7 +1,0 @@
-{
-    "listen": {
-    {% for i in disks -%}
-    "{{ lan_ip }}:{{ 9700 + i }}": "{{ lan_ip }}:{{ 9100 + i }}"{%if not loop.last %},{% endif %} 
-    {% endfor %}
-    }
-}
