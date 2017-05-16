@@ -1,0 +1,5 @@
+{% if syslogs["uce"] and syslogs["uce"] != '' -%}
+access_log syslog:server={{ syslogs["uce"] }},facility=local5 main;
+{% else %}
+access_log off;
+{% endif %}

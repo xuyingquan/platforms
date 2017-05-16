@@ -1,0 +1,6 @@
+{% if syslogs["lbf"] and syslogs["lbf"] != '' -%}
+access_log syslog:server={{ syslogs["lbf"] }},facility=local5 main;
+access_log_interval 300s;
+{% else %}
+access_log off;
+{% endif %}

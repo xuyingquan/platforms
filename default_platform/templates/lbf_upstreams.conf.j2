@@ -1,0 +1,10 @@
+upstream comm_backend {
+    keepalive 100;
+    server {{ lan_ip }}:7000;
+}
+
+upstream mgtv_backend {
+    keepalive 100;
+    server {{ lan_ip }}:7001;
+}
+
